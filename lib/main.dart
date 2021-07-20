@@ -128,6 +128,7 @@ class _feedbackState extends State<feedback> {
               setState(() {
                 if (_questionIndex < (questions.length)) {
                   _questionIndex++;
+                  rating = 1.0;
                 } else {
                   _questionIndex = 0;
                   total = 0;
