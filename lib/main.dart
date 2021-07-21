@@ -123,10 +123,12 @@ class _feedbackState extends State<feedback> {
               ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              total += rating;
-              print(total);
+              //total += rating;
+              //print(total);
               setState(() {
                 if (_questionIndex < (questions.length)) {
+                  total += rating;
+                  print(total);
                   _questionIndex++;
                   rating = 1.0;
                 } else {
