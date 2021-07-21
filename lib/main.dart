@@ -78,17 +78,33 @@ class _feedbackState extends State<feedback> {
                           SizedBox(
                             height: 20,
                           ),
-                          Slider(
-                            value: rating,
-                            min: 1,
-                            max: 5,
-                            divisions: 4,
-                            label: rating.round().toString(),
-                            onChanged: (newRating) {
-                              setState(() {
-                                rating = newRating;
-                              });
-                            },
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '1',
+                                style: TextStyle(fontSize: 20.0),
+                              ),
+                              Container(
+                                width: 300.0,
+                                child: Slider(
+                                  value: rating,
+                                  min: 1,
+                                  max: 5,
+                                  divisions: 4,
+                                  label: rating.round().toString(),
+                                  onChanged: (newRating) {
+                                    setState(() {
+                                      rating = newRating;
+                                    });
+                                  },
+                                ),
+                              ),
+                              Text(
+                                '5',
+                                style: TextStyle(fontSize: 20.0),
+                              ),
+                            ],
                           )
                         ],
                       ),
